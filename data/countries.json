@@ -1,0 +1,973 @@
+[
+  {
+    "name": "United States",
+    "code": "USA",
+    "capital": "Washington, D.C.",
+    "population": 336000000,
+    "is_nuclear_capable": true,
+    "allies": ["GBR", "FRA", "DEU", "CAN", "AUS", "JPN", "KOR", "ISR"],
+    "retaliation_probability": {
+      "default": 0.98,
+      "on_ally_attack": [
+        {"ally_code": "GBR", "probability": 0.95},
+        {"ally_code": "FRA", "probability": 0.95},
+        {"ally_code": "DEU", "probability": 0.90},
+        {"ally_code": "JPN", "probability": 0.85},
+        {"ally_code": "ISR", "probability": 0.88}
+      ]
+    },
+    "nukes_per_epoch_range": [2, 6],
+    "default_weapon": {
+      "name": "W88",
+      "yield_kt": 475,
+      "blast_radius_km": {
+        "fireball": 1.1,
+        "heavy_blast_damage_20psi": 3.5,
+        "moderate_blast_damage_5psi": 8.0,
+        "thermal_radiation_3rd_degree": 13.0
+      }
+    }
+  },
+  {
+    "name": "Russia",
+    "code": "RUS",
+    "capital": "Moscow",
+    "population": 145000000,
+    "is_nuclear_capable": true,
+    "allies": ["CHN", "BLR"],
+    "retaliation_probability": {
+      "default": 0.98,
+      "on_ally_attack": [
+        {"ally_code": "BLR", "probability": 0.90},
+        {"ally_code": "CHN", "probability": 0.70}
+      ]
+    },
+    "nukes_per_epoch_range": [2, 6],
+    "default_weapon": {
+      "name": "RS-28 Sarmat (Avangard HGV)",
+      "yield_kt": 750,
+      "blast_radius_km": {
+        "fireball": 1.4,
+        "heavy_blast_damage_20psi": 4.5,
+        "moderate_blast_damage_5psi": 9.5,
+        "thermal_radiation_3rd_degree": 15.0
+      }
+    }
+  },
+  {
+    "name": "China",
+    "code": "CHN",
+    "capital": "Beijing",
+    "population": 1425000000,
+    "is_nuclear_capable": true,
+    "allies": ["RUS", "PRK"],
+    "retaliation_probability": {
+      "default": 0.85,
+      "on_ally_attack": [
+        {"ally_code": "RUS", "probability": 0.70},
+        {"ally_code": "PRK", "probability": 0.60}
+      ]
+    },
+    "nukes_per_epoch_range": [1, 4],
+    "default_weapon": {
+      "name": "DF-41",
+      "yield_kt": 250,
+      "blast_radius_km": {
+        "fireball": 0.8,
+        "heavy_blast_damage_20psi": 2.8,
+        "moderate_blast_damage_5psi": 6.5,
+        "thermal_radiation_3rd_degree": 10.0
+      }
+    }
+  },
+  {
+    "name": "United Kingdom",
+    "code": "GBR",
+    "capital": "London",
+    "population": 67000000,
+    "is_nuclear_capable": true,
+    "allies": ["USA", "FRA", "DEU", "CAN", "AUS"],
+    "retaliation_probability": {
+      "default": 0.95,
+      "on_ally_attack": [
+        {"ally_code": "USA", "probability": 0.95}
+      ]
+    },
+    "nukes_per_epoch_range": [1, 2],
+    "default_weapon": {
+      "name": "Trident II (Holbrook)",
+      "yield_kt": 100,
+      "blast_radius_km": {
+        "fireball": 0.5,
+        "heavy_blast_damage_20psi": 1.8,
+        "moderate_blast_damage_5psi": 4.5,
+        "thermal_radiation_3rd_degree": 7.0
+      }
+    }
+  },
+  {
+    "name": "France",
+    "code": "FRA",
+    "capital": "Paris",
+    "population": 65000000,
+    "is_nuclear_capable": true,
+    "allies": ["USA", "GBR", "DEU", "CAN"],
+    "retaliation_probability": {
+      "default": 0.95,
+      "on_ally_attack": [
+        {"ally_code": "USA", "probability": 0.90}
+      ]
+    },
+    "nukes_per_epoch_range": [1, 2],
+    "default_weapon": {
+      "name": "Tête nucléaire océanique (TNO)",
+      "yield_kt": 100,
+      "blast_radius_km": {
+        "fireball": 0.5,
+        "heavy_blast_damage_20psi": 1.8,
+        "moderate_blast_damage_5psi": 4.5,
+        "thermal_radiation_3rd_degree": 7.0
+      }
+    }
+  },
+  {
+    "name": "India",
+    "code": "IND",
+    "capital": "New Delhi",
+    "population": 1428000000,
+    "is_nuclear_capable": true,
+    "allies": [],
+    "retaliation_probability": { "default": 0.80, "on_ally_attack": [] },
+    "nukes_per_epoch_range": [1, 3],
+    "default_weapon": {
+      "name": "Agni-V",
+      "yield_kt": 40,
+      "blast_radius_km": {
+        "fireball": 0.35,
+        "heavy_blast_damage_20psi": 1.2,
+        "moderate_blast_damage_5psi": 3.2,
+        "thermal_radiation_3rd_degree": 5.0
+      }
+    }
+  },
+  {
+    "name": "Pakistan",
+    "code": "PAK",
+    "capital": "Islamabad",
+    "population": 236000000,
+    "is_nuclear_capable": true,
+    "allies": [],
+    "retaliation_probability": { "default": 0.80, "on_ally_attack": [] },
+    "nukes_per_epoch_range": [1, 3],
+    "default_weapon": {
+      "name": "Shaheen-III",
+      "yield_kt": 40,
+      "blast_radius_km": {
+        "fireball": 0.35,
+        "heavy_blast_damage_20psi": 1.2,
+        "moderate_blast_damage_5psi": 3.2,
+        "thermal_radiation_3rd_degree": 5.0
+      }
+    }
+  },
+  {
+    "name": "North Korea",
+    "code": "PRK",
+    "capital": "Pyongyang",
+    "population": 26000000,
+    "is_nuclear_capable": true,
+    "allies": ["CHN"],
+    "retaliation_probability": {
+      "default": 0.75,
+      "on_ally_attack": [
+        {"ally_code": "CHN", "probability": 0.5}
+      ]
+    },
+    "nukes_per_epoch_range": [0, 2],
+    "default_weapon": {
+      "name": "Hwasong-15",
+      "yield_kt": 150,
+      "blast_radius_km": {
+        "fireball": 0.6,
+        "heavy_blast_damage_20psi": 2.1,
+        "moderate_blast_damage_5psi": 5.0,
+        "thermal_radiation_3rd_degree": 8.0
+      }
+    }
+  },
+  {
+    "name": "Israel",
+    "code": "ISR",
+    "capital": "Jerusalem",
+    "population": 9500000,
+    "is_nuclear_capable": true,
+    "allies": ["USA"],
+    "retaliation_probability": {
+      "default": 0.90,
+      "on_ally_attack": []
+    },
+    "nukes_per_epoch_range": [1, 2],
+    "default_weapon": {
+      "name": "Jericho III",
+      "yield_kt": 200,
+      "blast_radius_km": {
+        "fireball": 0.7,
+        "heavy_blast_damage_20psi": 2.5,
+        "moderate_blast_damage_5psi": 6.0,
+        "thermal_radiation_3rd_degree": 9.5
+      }
+    }
+  },
+  {
+    "name": "Australia",
+    "code": "AUS",
+    "capital": "Canberra",
+    "population": 26000000,
+    "is_nuclear_capable": false,
+    "allies": ["USA", "GBR"]
+  },
+  {
+    "name": "Germany",
+    "code": "DEU",
+    "capital": "Berlin",
+    "population": 84000000,
+    "is_nuclear_capable": false,
+    "allies": ["USA", "FRA", "GBR"]
+  },
+  {
+    "name": "Japan",
+    "code": "JPN",
+    "capital": "Tokyo",
+    "population": 125000000,
+    "is_nuclear_capable": false,
+    "allies": ["USA"]
+  },
+  {
+    "name": "South Korea",
+    "code": "KOR",
+    "capital": "Seoul",
+    "population": 52000000,
+    "is_nuclear_capable": false,
+    "allies": ["USA"]
+  },
+    {
+    "name": "Canada",
+    "code": "CAN",
+    "capital": "Ottawa",
+    "population": 38000000,
+    "is_nuclear_capable": false,
+    "allies": ["USA", "GBR", "FRA"]
+  },
+  {
+    "name": "Belarus",
+    "code": "BLR",
+    "capital": "Minsk",
+    "population": 9300000,
+    "is_nuclear_capable": false,
+    "allies": ["RUS"]
+  },
+  {
+    "name": "Iran",
+    "code": "IRN",
+    "capital": "Tehran",
+    "population": 88000000,
+    "is_nuclear_capable": false,
+    "allies": ["RUS"]
+  },
+  {
+    "name": "Turkey",
+    "code": "TUR",
+    "capital": "Ankara",
+    "population": 85000000,
+    "is_nuclear_capable": false,
+    "allies": ["USA", "GBR", "FRA", "DEU", "ITA", "CAN", "ESP", "POL"]
+  },
+  {
+    "name": "Italy",
+    "code": "ITA",
+    "capital": "Rome",
+    "population": 59000000,
+    "is_nuclear_capable": false,
+    "allies": ["USA", "GBR", "FRA", "DEU", "CAN", "ESP", "TUR"]
+  },
+  {
+    "name": "Spain",
+    "code": "ESP",
+    "capital": "Madrid",
+    "population": 47000000,
+    "is_nuclear_capable": false,
+    "allies": ["USA", "GBR", "FRA", "DEU", "ITA", "CAN"]
+  },
+  {
+    "name": "Poland",
+    "code": "POL",
+    "capital": "Warsaw",
+    "population": 38000000,
+    "is_nuclear_capable": false,
+    "allies": ["USA", "DEU", "GBR", "FRA"]
+  },
+  {
+    "name": "Taiwan",
+    "code": "TWN",
+    "capital": "Taipei",
+    "population": 23500000,
+    "is_nuclear_capable": false,
+    "allies": ["USA", "JPN"]
+  },
+  {
+    "name": "Saudi Arabia",
+    "code": "SAU",
+    "capital": "Riyadh",
+    "population": 36000000,
+    "is_nuclear_capable": false,
+    "allies": ["USA"]
+  },
+  {
+    "name": "Brazil",
+    "code": "BRA",
+    "capital": "Brasília",
+    "population": 215000000,
+    "is_nuclear_capable": false,
+    "allies": []
+  },
+  {
+    "name": "South Africa",
+    "code": "ZAF",
+    "capital": "Pretoria",
+    "population": 60000000,
+    "is_nuclear_capable": false,
+    "allies": []
+  },
+  {
+    "name": "Sweden",
+    "code": "SWE",
+    "capital": "Stockholm",
+    "population": 10500000,
+    "is_nuclear_capable": false,
+    "allies": ["USA", "GBR", "FRA", "DEU", "FIN", "DNK", "NOR"]
+  },
+  {
+    "name": "Finland",
+    "code": "FIN",
+    "capital": "Helsinki",
+    "population": 5500000,
+    "is_nuclear_capable": false,
+    "allies": ["USA", "GBR", "FRA", "DEU", "SWE", "DNK", "NOR"]
+  },
+  {
+    "name": "Netherlands",
+    "code": "NLD",
+    "capital": "Amsterdam",
+    "population": 17700000,
+    "is_nuclear_capable": false,
+    "allies": ["USA", "DEU", "GBR", "FRA", "CAN"]
+  },
+  {
+    "name": "Egypt",
+    "code": "EGY",
+    "capital": "Cairo",
+    "population": 109000000,
+    "is_nuclear_capable": false,
+    "allies": ["USA", "SAU"]
+  },
+  {
+    "name": "Philippines",
+    "code": "PHL",
+    "capital": "Manila",
+    "population": 113000000,
+    "is_nuclear_capable": false,
+    "allies": ["USA", "JPN", "AUS"]
+  },
+  {
+    "name": "Vietnam",
+    "code": "VNM",
+    "capital": "Hanoi",
+    "population": 98000000,
+    "is_nuclear_capable": false,
+    "allies": ["RUS", "IND", "AUS"]
+  },
+  {
+    "name": "Argentina",
+    "code": "ARG",
+    "capital": "Buenos Aires",
+    "population": 46000000,
+    "is_nuclear_capable": false,
+    "allies": ["USA"]
+  },
+  {
+    "name": "Indonesia",
+    "code": "IDN",
+    "capital": "Jakarta",
+    "population": 275000000,
+    "is_nuclear_capable": false,
+    "allies": ["USA", "AUS", "JPN"]
+  },
+  {
+    "name": "Malaysia",
+    "code": "MYS",
+    "capital": "Kuala Lumpur",
+    "population": 33000000,
+    "is_nuclear_capable": false,
+    "allies": ["GBR", "AUS", "NZL", "SGP"]
+  },
+    {
+    "name": "Singapore",
+    "code": "SGP",
+    "capital": "Singapore",
+    "population": 5600000,
+    "is_nuclear_capable": false,
+    "allies": ["GBR", "AUS", "NZL", "MYS", "USA"]
+  },
+  {
+    "name": "New Zealand",
+    "code": "NZL",
+    "capital": "Wellington",
+    "population": 5100000,
+    "is_nuclear_capable": false,
+    "allies": ["AUS", "GBR", "CAN", "USA"]
+  },
+  {
+    "name": "Nigeria",
+    "code": "NGA",
+    "capital": "Abuja",
+    "population": 218000000,
+    "is_nuclear_capable": false,
+    "allies": ["USA"]
+  },
+  {
+    "name": "Ethiopia",
+    "code": "ETH",
+    "capital": "Addis Ababa",
+    "population": 120000000,
+    "is_nuclear_capable": false,
+    "allies": ["RUS", "CHN", "TUR"]
+  },
+  {
+    "name": "Mexico",
+    "code": "MEX",
+    "capital": "Mexico City",
+    "population": 126000000,
+    "is_nuclear_capable": false,
+    "allies": ["USA"]
+  },
+  {
+    "name": "Romania",
+    "code": "ROU",
+    "capital": "Bucharest",
+    "population": 19000000,
+    "is_nuclear_capable": false,
+    "allies": ["USA", "FRA", "DEU", "POL"]
+  },
+  {
+    "name": "Chile",
+    "code": "CHL",
+    "capital": "Santiago",
+    "population": 19500000,
+    "is_nuclear_capable": false,
+    "allies": ["USA"]
+  },
+  {
+    "name": "Colombia",
+    "code": "COL",
+    "capital": "Bogotá",
+    "population": 51500000,
+    "is_nuclear_capable": false,
+    "allies": ["USA"]
+  },
+  {
+    "name": "Czech Republic",
+    "code": "CZE",
+    "capital": "Prague",
+    "population": 10500000,
+    "is_nuclear_capable": false,
+    "allies": ["USA", "DEU", "POL", "SVK"]
+  },
+  {
+    "name": "Slovakia",
+    "code": "SVK",
+    "capital": "Bratislava",
+    "population": 5400000,
+    "is_nuclear_capable": false,
+    "allies": ["USA", "DEU", "POL", "CZE", "HUN"]
+  },
+  {
+    "name": "Hungary",
+    "code": "HUN",
+    "capital": "Budapest",
+    "population": 9700000,
+    "is_nuclear_capable": false,
+    "allies": ["USA", "DEU", "POL", "SVK"]
+  },
+  {
+    "name": "Norway",
+    "code": "NOR",
+    "capital": "Oslo",
+    "population": 5400000,
+    "is_nuclear_capable": false,
+    "allies": ["USA", "GBR", "DEU", "SWE", "FIN", "DNK"]
+  },
+  {
+    "name": "Denmark",
+    "code": "DNK",
+    "capital": "Copenhagen",
+    "population": 5800000,
+    "is_nuclear_capable": false,
+    "allies": ["USA", "GBR", "DEU", "SWE", "FIN", "NOR"]
+  },
+  {
+    "name": "Greece",
+    "code": "GRC",
+    "capital": "Athens",
+    "population": 10400000,
+    "is_nuclear_capable": false,
+    "allies": ["USA", "FRA", "ITA", "CYP", "ISR"]
+  },
+  {
+    "name": "Portugal",
+    "code": "PRT",
+    "capital": "Lisbon",
+    "population": 10100000,
+    "is_nuclear_capable": false,
+    "allies": ["USA", "ESP", "FRA", "GBR", "BRA"]
+  },
+  {
+    "name": "United Arab Emirates",
+    "code": "ARE",
+    "capital": "Abu Dhabi",
+    "population": 9400000,
+    "is_nuclear_capable": false,
+    "allies": ["USA", "SAU"]
+  },
+  {
+    "name": "Qatar",
+    "code": "QAT",
+    "capital": "Doha",
+    "population": 2700000,
+    "is_nuclear_capable": false,
+    "allies": ["USA", "TUR"]
+  },
+  {
+    "name": "Kazakhstan",
+    "code": "KAZ",
+    "capital": "Astana",
+    "population": 19000000,
+    "is_nuclear_capable": false,
+    "allies": ["RUS", "CHN"]
+  },
+  {
+    "name": "Uzbekistan",
+    "code": "UZB",
+    "capital": "Tashkent",
+    "population": 35000000,
+    "is_nuclear_capable": false,
+    "allies": ["RUS", "CHN"]
+  },
+  {
+    "name": "Ireland",
+    "code": "IRL",
+    "capital": "Dublin",
+    "population": 5000000,
+    "is_nuclear_capable": false,
+    "allies": []
+  },
+  {
+    "name": "Ukraine",
+    "code": "UKR",
+    "capital": "Kyiv",
+    "population": 43000000,
+    "is_nuclear_capable": false,
+    "allies": ["USA", "GBR", "POL", "DEU", "FRA", "CAN"]
+  },
+  {
+    "name": "Belgium",
+    "code": "BEL",
+    "capital": "Brussels",
+    "population": 11600000,
+    "is_nuclear_capable": false,
+    "allies": ["USA", "DEU", "FRA", "NLD", "LUX"]
+  },
+  {
+    "name": "Austria",
+    "code": "AUT",
+    "capital": "Vienna",
+    "population": 9000000,
+    "is_nuclear_capable": false,
+    "allies": []
+  },
+  {
+    "name": "Switzerland",
+    "code": "CHE",
+    "capital": "Bern",
+    "population": 8700000,
+    "is_nuclear_capable": false,
+    "allies": []
+  },
+  {
+    "name": "Estonia",
+    "code": "EST",
+    "capital": "Tallinn",
+    "population": 1300000,
+    "is_nuclear_capable": false,
+    "allies": ["USA", "GBR", "DEU", "POL", "FIN", "LVA", "LTU"]
+  },
+  {
+    "name": "Latvia",
+    "code": "LVA",
+    "capital": "Riga",
+    "population": 1800000,
+    "is_nuclear_capable": false,
+    "allies": ["USA", "GBR", "DEU", "POL", "EST", "LTU"]
+  },
+  {
+    "name": "Lithuania",
+    "code": "LTU",
+    "capital": "Vilnius",
+    "population": 2700000,
+    "is_nuclear_capable": false,
+    "allies": ["USA", "GBR", "DEU", "POL", "EST", "LVA"]
+  },
+  {
+    "name": "Venezuela",
+    "code": "VEN",
+    "capital": "Caracas",
+    "population": 28000000,
+    "is_nuclear_capable": false,
+    "allies": ["RUS", "CHN", "IRN"]
+  },
+  {
+    "name": "Peru",
+    "code": "PER",
+    "capital": "Lima",
+    "population": 34000000,
+    "is_nuclear_capable": false,
+    "allies": ["USA"]
+  },
+  {
+    "name": "Thailand",
+    "code": "THA",
+    "capital": "Bangkok",
+    "population": 71000000,
+    "is_nuclear_capable": false,
+    "allies": ["USA"]
+  },
+  {
+    "name": "Syria",
+    "code": "SYR",
+    "capital": "Damascus",
+    "population": 21300000,
+    "is_nuclear_capable": false,
+    "allies": ["RUS", "IRN"]
+  },
+  {
+    "name": "Iraq",
+    "code": "IRQ",
+    "capital": "Baghdad",
+    "population": 43500000,
+    "is_nuclear_capable": false,
+    "allies": ["USA", "IRN"]
+  },
+  {
+    "name": "Afghanistan",
+    "code": "AFG",
+    "capital": "Kabul",
+    "population": 40100000,
+    "is_nuclear_capable": false,
+    "allies": ["CHN", "PAK"]
+  },
+  {
+    "name": "Bulgaria",
+    "code": "BGR",
+    "capital": "Sofia",
+    "population": 6800000,
+    "is_nuclear_capable": false,
+    "allies": ["USA", "DEU", "TUR", "GRC", "ROU"]
+  },
+  {
+    "name": "Croatia",
+    "code": "HRV",
+    "capital": "Zagreb",
+    "population": 4000000,
+    "is_nuclear_capable": false,
+    "allies": ["USA", "DEU", "ITA", "HUN"]
+  },
+  {
+    "name": "Serbia",
+    "code": "SRB",
+    "capital": "Belgrade",
+    "population": 7100000,
+    "is_nuclear_capable": false,
+    "allies": ["RUS", "CHN"]
+  },
+  {
+    "name": "Algeria",
+    "code": "DZA",
+    "capital": "Algiers",
+    "population": 44000000,
+    "is_nuclear_capable": false,
+    "allies": ["RUS", "CHN"]
+  },
+  {
+    "name": "Morocco",
+    "code": "MAR",
+    "capital": "Rabat",
+    "population": 37000000,
+    "is_nuclear_capable": false,
+    "allies": ["USA", "FRA", "ESP"]
+  },
+  {
+    "name": "Kenya",
+    "code": "KEN",
+    "capital": "Nairobi",
+    "population": 54000000,
+    "is_nuclear_capable": false,
+    "allies": ["USA", "GBR"]
+  },
+  {
+    "name": "Cuba",
+    "code": "CUB",
+    "capital": "Havana",
+    "population": 11200000,
+    "is_nuclear_capable": false,
+    "allies": ["RUS", "CHN", "VEN"]
+  },
+  {
+    "name": "Ecuador",
+    "code": "ECU",
+    "capital": "Quito",
+    "population": 18000000,
+    "is_nuclear_capable": false,
+    "allies": ["USA", "COL"]
+  },
+  {
+    "name": "Bolivia",
+    "code": "BOL",
+    "capital": "Sucre",
+    "population": 12200000,
+    "is_nuclear_capable": false,
+    "allies": ["VEN", "CUB", "RUS"]
+  },
+  {
+    "name": "Paraguay",
+    "code": "PRY",
+    "capital": "Asunción",
+    "population": 7300000,
+    "is_nuclear_capable": false,
+    "allies": ["USA", "BRA", "ARG"]
+  },
+  {
+    "name": "Uruguay",
+    "code": "URY",
+    "capital": "Montevideo",
+    "population": 3400000,
+    "is_nuclear_capable": false,
+    "allies": ["ARG", "BRA"]
+  },
+  {
+    "name": "Bangladesh",
+    "code": "BGD",
+    "capital": "Dhaka",
+    "population": 171000000,
+    "is_nuclear_capable": false,
+    "allies": ["IND", "CHN", "USA"]
+  },
+  {
+    "name": "Sri Lanka",
+    "code": "LKA",
+    "capital": "Colombo",
+    "population": 22100000,
+    "is_nuclear_capable": false,
+    "allies": ["IND", "CHN"]
+  },
+  {
+    "name": "Libya",
+    "code": "LBY",
+    "capital": "Tripoli",
+    "population": 6800000,
+    "is_nuclear_capable": false,
+    "allies": ["TUR", "EGY", "RUS"]
+  },
+  {
+    "name": "Tunisia",
+    "code": "TUN",
+    "capital": "Tunis",
+    "population": 12100000,
+    "is_nuclear_capable": false,
+    "allies": ["USA", "FRA", "DZA"]
+  },
+  {
+    "name": "Ghana",
+    "code": "GHA",
+    "capital": "Accra",
+    "population": 33000000,
+    "is_nuclear_capable": false,
+    "allies": ["USA", "GBR"]
+  },
+  {
+    "name": "DR Congo",
+    "code": "COD",
+    "capital": "Kinshasa",
+    "population": 99000000,
+    "is_nuclear_capable": false,
+    "allies": ["FRA", "BEL"]
+  },
+  {
+    "name": "Panama",
+    "code": "PAN",
+    "capital": "Panama City",
+    "population": 4400000,
+    "is_nuclear_capable": false,
+    "allies": ["USA", "COL"]
+  },
+  {
+    "name": "Costa Rica",
+    "code": "CRI",
+    "capital": "San José",
+    "population": 5200000,
+    "is_nuclear_capable": false,
+    "allies": ["USA"]
+  },
+  {
+    "name": "Bosnia and Herzegovina",
+    "code": "BIH",
+    "capital": "Sarajevo",
+    "population": 3200000,
+    "is_nuclear_capable": false,
+    "allies": ["USA", "TUR"]
+  },
+  {
+    "name": "Albania",
+    "code": "ALB",
+    "capital": "Tirana",
+    "population": 2800000,
+    "is_nuclear_capable": false,
+    "allies": ["USA", "ITA", "TUR", "GRC"]
+  },
+  {
+    "name": "Cyprus",
+    "code": "CYP",
+    "capital": "Nicosia",
+    "population": 1200000,
+    "is_nuclear_capable": false,
+    "allies": ["GRC", "ISR", "EGY"]
+  },
+  {
+    "name": "Iceland",
+    "code": "ISL",
+    "capital": "Reykjavik",
+    "population": 375000,
+    "is_nuclear_capable": false,
+    "allies": ["USA", "NOR", "DNK", "GBR"]
+  },
+  {
+    "name": "Turkmenistan",
+    "code": "TKM",
+    "capital": "Ashgabat",
+    "population": 6300000,
+    "is_nuclear_capable": false,
+    "allies": ["RUS", "CHN"]
+  },
+  {
+    "name": "Kyrgyzstan",
+    "code": "KGZ",
+    "capital": "Bishkek",
+    "population": 6700000,
+    "is_nuclear_capable": false,
+    "allies": ["RUS", "CHN", "KAZ"]
+  },
+  {
+    "name": "Cambodia",
+    "code": "KHM",
+    "capital": "Phnom Penh",
+    "population": 16700000,
+    "is_nuclear_capable": false,
+    "allies": ["CHN", "VNM"]
+  },
+  {
+    "name": "Laos",
+    "code": "LAO",
+    "capital": "Vientiane",
+    "population": 7500000,
+    "is_nuclear_capable": false,
+    "allies": ["CHN", "VNM", "RUS"]
+  },
+  {
+    "name": "Luxembourg",
+    "code": "LUX",
+    "capital": "Luxembourg City",
+    "population": 645000,
+    "is_nuclear_capable": false,
+    "allies": ["USA", "DEU", "FRA", "BEL"]
+  },
+  {
+    "name": "Malta",
+    "code": "MLT",
+    "capital": "Valletta",
+    "population": 535000,
+    "is_nuclear_capable": false,
+    "allies": ["ITA", "GBR"]
+  },
+  {
+    "name": "Tajikistan",
+    "code": "TJK",
+    "capital": "Dushanbe",
+    "population": 9800000,
+    "is_nuclear_capable": false,
+    "allies": ["RUS", "CHN"]
+  },
+  {
+    "name": "Nepal",
+    "code": "NPL",
+    "capital": "Kathmandu",
+    "population": 30000000,
+    "is_nuclear_capable": false,
+    "allies": ["IND", "CHN"]
+  },
+  {
+    "name": "Myanmar",
+    "code": "MMR",
+    "capital": "Naypyidaw",
+    "population": 54000000,
+    "is_nuclear_capable": false,
+    "allies": ["CHN", "RUS"]
+  },
+  {
+    "name": "Guatemala",
+    "code": "GTM",
+    "capital": "Guatemala City",
+    "population": 17100000,
+    "is_nuclear_capable": false,
+    "allies": ["USA", "MEX"]
+  },
+  {
+    "name": "Honduras",
+    "code": "HND",
+    "capital": "Tegucigalpa",
+    "population": 10200000,
+    "is_nuclear_capable": false,
+    "allies": ["USA"]
+  },
+  {
+    "name": "Nicaragua",
+    "code": "NIC",
+    "capital": "Managua",
+    "population": 6800000,
+    "is_nuclear_capable": false,
+    "allies": ["RUS", "CUB", "VEN"]
+  },
+  {
+    "name": "Jamaica",
+    "code": "JAM",
+    "capital": "Kingston",
+    "population": 2800000,
+    "is_nuclear_capable": false,
+    "allies": ["USA", "GBR", "CAN"]
+  },
+  {
+    "name": "Angola",
+    "code": "AGO",
+    "capital": "Luanda",
+    "population": 34500000,
+    "is_nuclear_capable": false,
+    "allies": ["RUS", "CHN", "CUB"]
+  }
+]

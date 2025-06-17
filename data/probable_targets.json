@@ -1,0 +1,109 @@
+{
+  "USA": [
+    {
+      "name": "Naval Station Norfolk",
+      "type": "Major Naval Base",
+      "city": "Norfolk, VA",
+      "location": {"lat": 36.9530, "lon": -76.3200},
+      "probability": 0.85
+    },
+    {
+      "name": "Wright-Patterson Air Force Base",
+      "type": "Military Research & Logistics",
+      "city": "Dayton, OH",
+      "location": {"lat": 39.8263, "lon": -84.0483},
+      "probability": 0.70
+    },
+    {
+      "name": "New York City",
+      "type": "Major Population & Economic Center",
+      "city": "New York, NY",
+      "location": {"lat": 40.7128, "lon": -74.0060},
+      "probability": 0.60
+    }
+  ],
+  "RUS": [
+    {
+      "name": "Sevmash Shipyard",
+      "type": "Submarine Production",
+      "city": "Severodvinsk",
+      "location": {"lat": 64.5822, "lon": 39.8169},
+      "probability": 0.80
+    },
+    {
+      "name": "Saint Petersburg",
+      "type": "Major Port & Economic Center",
+      "city": "Saint Petersburg",
+      "location": {"lat": 59.9343, "lon": 30.3351},
+      "probability": 0.65
+    }
+  ],
+  "CHN": [
+    {
+      "name": "Shanghai",
+      "type": "Major Port & Economic Center",
+      "city": "Shanghai",
+      "location": {"lat": 31.2304, "lon": 121.4737},
+      "probability": 0.75
+    },
+    {
+      "name": "Three Gorges Dam",
+      "type": "Critical Infrastructure",
+      "city": "Yiling District",
+      "location": {"lat": 30.8231, "lon": 111.0036},
+      "probability": 0.40
+    }
+  ],
+  "GBR": [
+    {
+      "name": "London",
+      "type": "Capital & Economic Center",
+      "city": "London",
+      "location": {"lat": 51.5072, "lon": -0.1276},
+      "probability": 0.80
+    }
+  ],
+  "FRA": [
+    {
+      "name": "Paris",
+      "type": "Capital & Economic Center",
+      "city": "Paris",
+      "location": {"lat": 48.8566, "lon": 2.3522},
+      "probability": 0.80
+    }
+  ],
+  "AUS": [
+    {
+      "name": "Pine Gap",
+      "type": "Joint Defense Facility (US Intel)",
+      "city": "near Alice Springs",
+      "location": {"lat": -23.7975, "lon": 133.7342},
+      "probability": 0.90
+    },
+    {
+      "name": "HMAS Stirling",
+      "type": "Major Naval Base",
+      "city": "Perth",
+      "location": {"lat": -32.1380, "lon": 115.7070},
+      "probability": 0.70
+    }
+  ],
+  "DEU": [
+    {
+      "name": "Ramstein Air Base",
+      "type": "Major USAF Base & NATO Command",
+      "city": "Ramstein-Miesenbach",
+      "location": {"lat": 49.4367, "lon": 7.6006},
+      "probability": 0.95
+    }
+  ],
+  "JPN": [
+    {
+      "name": "Yokosuka Naval Base",
+      "type": "Major US Naval Base (7th Fleet)",
+      "city": "Yokosuka",
+      "location": {"lat": 35.2894, "lon": 139.6672},
+      "probability": 0.90
+    }
+  ]
+}

@@ -1,0 +1,102 @@
+{
+  "USA": [
+    {
+      "name": "The Pentagon",
+      "type": "Command & Control",
+      "city": "Arlington, VA",
+      "location": {"lat": 38.8719, "lon": -77.0563}
+    },
+    {
+      "name": "Cheyenne Mountain Complex",
+      "type": "Command & Control",
+      "city": "Colorado Springs, CO",
+      "location": {"lat": 38.8446, "lon": -104.8468}
+    },
+    {
+      "name": "Malmstrom Air Force Base",
+      "type": "ICBM Silo Field",
+      "city": "Great Falls, MT",
+      "location": {"lat": 47.5057, "lon": -111.1895}
+    },
+    {
+      "name": "Naval Base Kitsap",
+      "type": "SSBN Submarine Base",
+      "city": "Bremerton, WA",
+      "location": {"lat": 47.5915, "lon": -122.6841}
+    }
+  ],
+  "RUS": [
+    {
+      "name": "National Defense Management Center",
+      "type": "Command & Control",
+      "city": "Moscow",
+      "location": {"lat": 55.7487, "lon": 37.6177}
+    },
+    {
+      "name": "Kosvinsky Kamen",
+      "type": "Alternate Command Post",
+      "city": "Sverdlovsk Oblast",
+      "location": {"lat": 59.5167, "lon": 59.0667}
+    },
+    {
+      "name": "Dombarovsky Air Base",
+      "type": "Strategic Bomber Base / HGV Silos",
+      "city": "Orenburg Oblast",
+      "location": {"lat": 50.7711, "lon": 59.5394}
+    },
+    {
+      "name": "Vilyuchinsk Naval Base",
+      "type": "SSBN Submarine Base",
+      "city": "Kamchatka Krai",
+      "location": {"lat": 52.9300, "lon": 158.4100}
+    }
+  ],
+  "CHN": [
+    {
+      "name": "PLARF Command",
+      "type": "Command & Control",
+      "city": "Beijing",
+      "location": {"lat": 39.9042, "lon": 116.4074}
+    },
+    {
+      "name": "Yulin Naval Base",
+      "type": "SSBN Submarine Base",
+      "city": "Hainan Island",
+      "location": {"lat": 18.2128, "lon": 109.6897}
+    },
+    {
+      "name": "ICBM Silo Field (Yumen)",
+      "type": "ICBM Silo Field",
+      "city": "Gansu Province",
+      "location": {"lat": 40.2700, "lon": 97.5800}
+    }
+  ],
+  "GBR": [
+    {
+      "name": "Northwood Headquarters",
+      "type": "Command & Control",
+      "city": "Hertfordshire",
+      "location": {"lat": 51.6150, "lon": -0.3750}
+    },
+    {
+      "name": "HMNB Clyde",
+      "type": "SSBN Submarine Base",
+      "city": "Faslane, Scotland",
+      "location": {"lat": 56.0667, "lon": -4.8167}
+    }
+  ],
+  "FRA": [
+    {
+      "name": "Île Longue",
+      "type": "SSBN Submarine Base",
+      "city": "Brest",
+      "location": {"lat": 48.2994, "lon": -4.5086}
+    },
+    {
+        "name": "Istres-Le Tubé Air Base",
+        "type": "Strategic Bomber Base",
+        "city": "Istres",
+        "location": {"lat": 43.5233, "lon": 4.9858}
+    }
+  ]
+}

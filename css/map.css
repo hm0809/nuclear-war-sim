@@ -1,0 +1,27 @@
+#map-container {
+    background-color: #0b2038;
+    position: relative; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden; 
+}
+
+.country {
+    fill: #5a5a5a;
+    stroke: #1a1a1a;
+    stroke-width: 0.5px;
+    transition: fill 0.2s ease-in-out;
+}
+
+.country:hover {
+    fill: #8a8a8a;
+    cursor: pointer;
+}
+
+.capital-marker {
+    fill: #ffeb3b;
+    stroke: #000;
+    stroke-width: 0.5px;
+    pointer-events: none;
+}

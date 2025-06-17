@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nuclear War Simulator</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Roboto+Mono:wght@400;700&display=swap" rel="stylesheet">
+    <!-- D3.js Library for Map Rendering -->
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+    <!-- Main Stylesheet -->
+    <link rel="stylesheet" href="css/style.css">
+    <!-- Map-specific Stylesheet -->
+    <link rel="stylesheet" href="css/map.css">
+</head>
+<body>
+    <!-- Top Container (10% height) -->
+    <header class="top-container">
+        <h1>Nuclear War Simulator</h1>
+    </header>
+
+    <!-- Middle Container (takes up the main space) -->
+    <main class="middle-container">
+        <!-- Left Panel (18% width) -->
+        <aside id="left-panel" class="info-panel">
+            <h2>Country Data</h2>
+            <p id="left-panel-placeholder">Click a country to see details.</p>
+            <div id="country-info-content"></div>
+        </aside>
+
+        <!-- Map Container (64% width) -->
+        <div id="map-container">
+            <!-- The SVG map will be generated here by D3.js -->
+        </div>
+
+        <!-- Right Panel (18% width) -->
+        <aside id="right-panel" class="info-panel">
+            <h2>Target Information</h2>
+            <p>Details about specific targets will appear here when you interact with markers on the map.</p>
+        </aside>
+    </main>
+
+    <!-- Bottom Container (10% height) -->
+    <footer id="bottom-container" class="stats-panel-container">
+        <div id="stats-content" class="stats-content collapsed">
+             <div class="stats-header">
+                <h3>Global Status</h3>
+                <div class="epoch-counter">
+                    <strong>Day:</strong> <span id="day-counter">0</span>
+                </div>
+                <!-- "Next Day" button for controlling the simulation -->
+                <button id="next-day-btn" class="sim-button">Next Day &rarr;</button>
+            </div>
+            <div class="stats-body">
+                <div id="casualties-section" class="stats-section">
+                    <h4>Global Casualties</h4>
+                    <p>Estimated: <span id="total-casualties">0</span></p>
+                </div>
+                <div id="log-section" class="stats-section">
+                    <h4>Event Log</h4>
+                    <ul id="event-log" class="event-log-list">
+                        <li>Simulation has not yet begun.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <button id="stats-toggle-button" class="stats-toggle">Simulation Log & Stats &#9650;</button>
+    </footer>
+    
+    <!-- Project Scripts (order is important) -->
+    <script src="js/data_loader.js"></script>
+    <script src="js/ui_handler.js"></script>
+    <script src="js/map_handler.js"></script>
+    <script src="js/simulation.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>

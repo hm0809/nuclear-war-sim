@@ -1,0 +1,192 @@
+/* --- style.css --- */
+/* General Resets and Global Styles */
+:root {
+    --primary-bg: #1a1a1a;
+    --secondary-bg: #2a2a2a;
+    --panel-bg: #242424;
+    --border-color: #444;
+    --primary-text: #e0e0e0;
+    --secondary-text: #a0a0a0;
+    --accent-color: #d9534f;
+    --accent-hover: #c9302c;
+    --font-primary: 'Inter', sans-serif;
+    --font-monospace: 'Roboto Mono', monospace;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100vh;
+    width: 100vw;
+    overflow: hidden;
+    font-family: var(--font-primary);
+    background-color: var(--primary-bg);
+    color: var(--primary-text);
+}
+
+body {
+    display: grid;
+    grid-template-rows: 10vh 1fr 10vh;
+    height: 100vh;
+}
+
+/* --- Container Styling --- */
+.top-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--secondary-bg);
+    border-bottom: 2px solid var(--border-color);
+}
+
+.top-container h1 {
+    font-size: 1.8rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.middle-container {
+    display: grid;
+    grid-template-columns: 18% 64% 18%;
+    width: 100%;
+    overflow: hidden;
+}
+
+/* --- Bottom Stats Panel --- */
+#bottom-container {
+    background-color: var(--secondary-bg);
+    border-top: 2px solid var(--border-color);
+    position: relative; /* Crucial for positioning the stats content */
+    display: flex;
+    flex-direction: column-reverse; /* Puts the toggle button at the bottom */
+}
+
+/* Side panels */
+.info-panel {
+    background-color: var(--panel-bg);
+    padding: 1.5rem;
+    overflow-y: auto;
+    border-left: 1px solid var(--border-color);
+    border-right: 1px solid var(--border-color);
+}
+
+.info-panel h2 {
+    font-size: 1.2rem;
+    border-bottom: 1px solid var(--border-color);
+    padding-bottom: 0.75rem;
+    margin-bottom: 1rem;
+}
+
+.info-panel p {
+    color: var(--secondary-text);
+    font-size: 0.9rem;
+    line-height: 1.6;
+}
+
+/* Stats Panel (Bottom) */
+.stats-toggle {
+    width: 100%;
+    background-color: var(--secondary-bg);
+    border: none;
+    color: var(--primary-text);
+    padding: 0.75rem;
+    font-size: 1rem;
+    font-family: var(--font-primary);
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+    text-align: center;
+    z-index: 10; /* Ensure it stays on top */
+    flex-shrink: 0;
+}
+
+.stats-toggle:hover {
+    background-color: #333;
+}
+
+.stats-content {
+    position: absolute;
+    bottom: 100%; /* Positions the panel right above the footer */
+    left: 0;
+    width: 100%;
+    background-color: var(--panel-bg);
+    border-top: 2px solid var(--border-color);
+    border-radius: 8px 8px 0 0;
+    padding: 1.5rem;
+    max-height: 300px; /* Maximum upward expansion */
+    overflow-y: auto;
+    
+    /* Animation settings */
+    transition: transform 0.4s ease-in-out, opacity 0.4s ease-in-out;
+    transform: translateY(0);
+    opacity: 1;
+}
+
+.stats-content.collapsed {
+    /* Moves the panel down out of view */
+    transform: translateY(100%);
+    opacity: 0;
+    pointer-events: none; /* Disables interaction when collapsed */
+}
+
+.stats-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+.epoch-counter {
+    font-family: var(--font-monospace);
+    font-size: 1.1rem;
+    background-color: var(--primary-bg);
+    padding: 0.25rem 0.75rem;
+    border-radius: 4px;
+}
+
+.stats-body {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 1.5rem;
+}
+
+.stats-section h4 {
+    margin-bottom: 0.5rem;
+    color: var(--secondary-text);
+    font-weight: 600;
+}
+
+.event-log-list {
+    list-style: none;
+    font-family: var(--font-monospace);
+    font-size: 0.85rem;
+    height: 100px;
+    overflow-y: auto;
+    padding-right: 10px;
+}
+
+.event-log-list li {
+    padding: 0.2rem 0;
+    border-bottom: 1px solid #333;
+}
+
+/* Style for the new "Next Day" button */
+.sim-button {
+    background-color: var(--accent-color);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 0.5rem 1rem;
+    font-family: var(--font-primary);
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+.sim-button:hover {
+    background-color: var(--accent-hover);
+}
